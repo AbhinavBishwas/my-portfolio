@@ -10,7 +10,6 @@ export default function App() {
   return (
    
     <div>
-       
     <Navbar></Navbar>
     <Home></Home>
     <About></About>
@@ -20,7 +19,5 @@ export default function App() {
     {/* <Gallery></Gallery> */}
     <Contact></Contact>
     </div>
-    
-    
   )
 }

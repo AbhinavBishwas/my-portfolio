@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes} from 'react-icons/fa'
-
-
-
-
+// import {Link} from 'react-router-dom'
 const Navbar = () => {
-
 const [nav,setnav] =useState(false);
-
   const links=[
   {
     id:1,
@@ -31,8 +26,6 @@ const [nav,setnav] =useState(false);
     link: 'contact',
   },
 ];
- 
-
   return (
     <div className="flex justify-between items-center w-full h-20 text-white fixed bg-black px-4">
       <div>
@@ -43,7 +36,9 @@ const [nav,setnav] =useState(false);
     <ul className=" md:flex hidden">
 
       {links.map((link)=> (
-        <li key={link.id} className="px-4 cursor-pointer hover:border-b-2  hover:inline hover:border-gray-400 hover:text-gray-300    capitalize font-medium text-gray-400 hover:scale-105 duration-200 text-xl">{link.link}</li>
+        <li key={link.id} className="px-4 cursor-pointer hover:border-b-2  hover:inline hover:border-gray-400 hover:text-gray-300    capitalize font-medium text-gray-400 hover:scale-105 duration-200 text-xl" >
+          {link.link}
+        </li>   
       ))}
 
     </ul>
@@ -58,9 +53,7 @@ const [nav,setnav] =useState(false);
         
           {links.map((link)=>(
             <li key={link.id} className="py-6 cursor-pointer capitalize font-medium hover:scale-105 duration-200">{link.link}</li>
-          ))}
-          
-          
+          ))}        
         </ul>
         )}
         
