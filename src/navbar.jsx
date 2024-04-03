@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes} from 'react-icons/fa'
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-scroll'
 const Navbar = () => {
 const [nav,setnav] =useState(false);
   const links=[
   {
     id:1,
-    link: 'home',
+    link: "home",
   },
   {
     id:2,
-    link: 'about',
+    link: "about",
   },
   {
     id:3,
@@ -37,7 +37,9 @@ const [nav,setnav] =useState(false);
 
       {links.map((link)=> (
         <li key={link.id} className="px-4 cursor-pointer hover:border-b-2  hover:inline hover:border-gray-400 hover:text-gray-300    capitalize font-medium text-gray-400 hover:scale-105 duration-200 text-xl" >
-          {link.link}
+          <Link to={link.link} smooth duration={500} >
+              {link.link}
+              </Link>
         </li>   
       ))}
 
@@ -52,7 +54,11 @@ const [nav,setnav] =useState(false);
           <ul className="  flex flex-col justify-center items-center text-4xl top-0 absolute left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800  text-gray-300">
         
           {links.map((link)=>(
-            <li key={link.id} className="py-6 cursor-pointer capitalize font-medium hover:scale-105 duration-200">{link.link}</li>
+            <li key={link.id} className="py-6 cursor-pointer capitalize font-medium hover:scale-105 duration-200">
+              <Link to={link.link} smooth duration={500} >
+              {link.link}
+              </Link>
+            </li>
           ))}        
         </ul>
         )}

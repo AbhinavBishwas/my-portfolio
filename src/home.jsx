@@ -1,8 +1,6 @@
 import React from 'react'
 import Myimage from '../src/assets/hero1.jpg'
 import { RiArrowRightDoubleLine } from 'react-icons/ri';
-
-
 const home = () => {
   return (
     <div name="home" className="h-screen w-full bg-gradient-to-b from-black to bg-gray-800 via-black">
@@ -13,7 +11,7 @@ const home = () => {
             Currentl i love to work on web applications using texhstacks like React, Tailwind, javascript,and Graphsql. 
           </p>
           <div className="flex" >
-            <button className="group flex w-fit text-white px-6 py-3 my-2 rounded-md items-center bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer" >
+            <button className="group flex w-fit text-white px-6 py-3 my-2 rounded-md items-center bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">
               Projects <span className="group-hover:rotate-90 duration-300"> <RiArrowRightDoubleLine size={25}/> </span>
             </button>
         </div>
@@ -26,4 +24,4 @@ const home = () => {
   )
 }
 
-export default home
+export default home;
